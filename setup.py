@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
 setup(
-    name='fivetran-wrapper',
+    name='fivetraner',
     packages=find_packages(include=['fivetran_wrapper']),
     version='0.1.0',
-    url='https://github.com/glavmotor/fivetran-wrapper',
+    url='https://github.com/glavmotor/fivetraner',
     description='Fivetran service API wrapper',
     long_description=open('README.rst').read(),
     author='Dmitry Kravtsov',
