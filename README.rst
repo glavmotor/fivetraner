@@ -1,5 +1,5 @@
 Fivetran service API Wrapper
-=============
+============================
 
 
 
@@ -10,14 +10,14 @@ Install from PyPI with:
 
 .. code::
 
-    pip install fivetran-wrapper
+    pip install fivetraner
 
 Usage
 =====
 
 .. code:: python
 
-    from fivetran-wrapper import FivetranWrapper
+    from fivetraner import FivetranWrapper
 
 
     logger = logging.getLogger(__name__)
