@@ -2,39 +2,15 @@
 Wrapper for simple and easy interaction with Fivetran service API
 """
 from typing import Optional
-from enum import Enum
 import logging
 from requests import request, Response
 from requests.auth import HTTPBasicAuth
 from error_wrapper import ErrorWrapper
+from .constant_sets import ReturnCodes, ResponseKeys, DataKeys
 
 
 COMPLETE_STATUSES = (200, 201)
-REQUEST_HEADER = {'Content-Type': 'application/json;version=2'}
-
-
-class ReturnCodes(Enum):
-    """
-    Keys for API return code
-    """
-    SUCCESS = 'Success'
-
-
-class ResponseKeys(Enum):
-    """
-    Keys for success response data, level 0
-    """
-    CODE = 'code'
-    MESSAGE = 'message'
-    DATA = 'data'
-
-
-class DataKeys(Enum):
-    """
-    Keys for success response data, level 1
-    """
-    ITEMS = 'items'
-    CURSOR = 'next_cursor'
+REQUEST_HEADERS = {'Content-Type': 'application/json'}
 
 
 class BaseFivetranWrapper(ErrorWrapper):
@@ -58,7 +34,7 @@ class BaseFivetranWrapper(ErrorWrapper):
                  auto_logging: bool = False,):
         super().__init__(
             report_prefix, exception_name_in_detail, logger, auto_logging)
-        self.headers = {'Content-Type': 'application/json'}
+        self.headers = REQUEST_HEADERS
         self.base_url = base_url
         self._auth = HTTPBasicAuth(api_key, api_secret)
 
