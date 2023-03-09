@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 setup(
-    name='fivetraner',
+    name='fivetran-wrapper',
     packages=find_packages(include=['fivetran_wrapper']),
     version='0.1.1',
     url='https://github.com/glavmotor/fivetraner',
