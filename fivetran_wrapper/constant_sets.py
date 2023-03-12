@@ -26,6 +26,27 @@ class DataKeys(Enum):
     STATUS = 'status'
 
 
+class GroupKey(Enum):
+    """
+    Keys for group data
+    """
+    ID = 'id'
+    NAME = 'name'
+
+
+class ConnectorKey(Enum):
+    """
+    Keys for connector data level 0
+    """
+    ID = 'id'
+    STATUS = 'status'
+    SUCCEEDED_AT = 'succeeded_at'
+    FAILED_AT = 'failed_at'
+    SYNC_FREQUENCY = 'sync_frequency'
+    DAILY_SYNC_TIME = 'daily_sync_time'
+    SCHEDULE_TYPE = 'schedule_type'
+
+
 class StatusKey(Enum):
     """
     Keys for connector data status block
