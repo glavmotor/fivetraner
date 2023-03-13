@@ -1,14 +1,14 @@
 from enum import Enum
 
 
-class ReturnCodes(Enum):
+class ReturnCode(Enum):
     """
     Keys for API return code
     """
     SUCCESS = 'Success'
 
 
-class ResponseKeys(Enum):
+class ResponseKey(Enum):
     """
     Keys for response data, level 0
     """
@@ -17,13 +17,22 @@ class ResponseKeys(Enum):
     DATA = 'data'
 
 
-class DataKeys(Enum):
+class DataKey(Enum):
     """
     Keys for success response data, level 1
     """
     ITEMS = 'items'
     CURSOR = 'next_cursor'
     STATUS = 'status'
+    CONNECT_CARD = 'connect_card'
+
+
+class ConnectCardKey(Enum):
+    """
+    Keys for connect card data
+    """
+    TOKEN = 'token'
+    URI = 'uri'
 
 
 class GroupKey(Enum):
