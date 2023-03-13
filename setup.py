@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 setup(
     name='fivetran-wrapper',
     packages=find_packages(include=['fivetran_wrapper']),
-    version='0.1.1',
+    version='0.1.2',
     url='https://github.com/glavmotor/fivetraner',
     description='Fivetran service API wrapper',
     long_description=open('README.rst').read(),
